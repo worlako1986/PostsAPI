@@ -10,7 +10,7 @@ import create_table_in_database as dbt
 # Create instance of fast-api
 app = FastAPI()
 
-@app.get('/')
+@app.get('/', status_code= status.HTTP_200_OK)
 def root():
     return {'message': 'login'}
 
